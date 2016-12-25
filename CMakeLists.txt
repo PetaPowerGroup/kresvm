@@ -1,0 +1,8 @@
+cmake_minimum_required (VERSION 2.6)
+project (kresvm)
+set(CMAKE_BINARY_DIR ${CMAKE_SOURCE_DIR}/bin)
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR})
+set(SOURCE_DIR ${PROJECT_SOURCE_DIR}/src)
+include_directories("${SOURCE_DIR}")
+file(GLOB SOURCES "${SOURCE_DIR}/*.cpp")
+add_executable(kresvm ${SOURCES})

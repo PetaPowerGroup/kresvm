@@ -10,7 +10,6 @@ class kernel {
 public:
 	virtual double calculate(PElement i, PElement j) = 0;
 	virtual node* create_node() = 0;
-
 };
 
 class linear_kernel: public kernel{

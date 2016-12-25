@@ -7,7 +7,7 @@ void svm::train(PSamples samples, int num, double c){
 	root = trainer->train(ken,new alg1(),samples,c,num);
 }
 
-double* svm::get_array(std::string &str) {
+double* svm::get_array(const std::string &str) {
 	double *niz = new double[vel_uz];
 
 	for (int i=0; i<vel_uz; i++) niz[i]=0; 
@@ -43,7 +43,7 @@ void svm::train(std::istream &in,int vel,double c){
 	train(sam,max,c);
 }
 
-int svm::classify(std::string &pat){
+int svm::classify(const std::string &pat){
 	double *niz = get_array(pat);
 	PElement e = new Element(niz,vel_uz);
 
